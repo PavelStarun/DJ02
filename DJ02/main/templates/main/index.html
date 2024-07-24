@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать в мир вейкбординга!</h1>
+    <p class="lead">Изучите основы, оборудование, советы и безопасность для начинающих.</p>
+    <hr class="my-4">
+    <p>Начните свое приключение с вейкбордом сегодня.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'basics' %}" role="button">Узнать больше</a>
+</div>
+{% endblock %}

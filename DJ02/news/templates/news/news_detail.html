@@ -9,6 +9,6 @@
 <p><em>{{ post.pub_date }}</em></p>
 <p><strong>{{ post.name }}</strong></p>
 {% if new.image %}
-    <img src="{{ new.image.url }}" alt="{{ new.title }}">
+    <img src="{{ static.image.url }}" alt="{{ post.title }}">
 {% endif %}
 {% endblock %}

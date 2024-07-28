@@ -11,4 +11,8 @@
 {% if post.image %}
     <img src="{{ post.image.url }}" alt="{{ post.title }}">
 {% endif %}
+{% if post.url %}
+    <a href="{{ post.url }}"><button>Подробнее</button></a>
+{% endif %}
+<hr>
 {% endblock %}

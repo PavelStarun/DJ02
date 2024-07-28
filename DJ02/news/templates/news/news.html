@@ -9,7 +9,7 @@
 
 {% for new in news %}
     <div>
-        <h3>{{ new.title }}</h3>
+        <h5>{{ new.title }}</h5>
         <br>
         <h6>{{ new.short_description }}</h6>
         <p>{{ new.text }}</p>
@@ -19,8 +19,11 @@
         {% endif %}
         <p>{{ new.pub_date }}</p>
         <p><strong>{{ new.name }}</strong></p>
-        <a href="{% url 'news_detail' new.pk %}"><button>Подробнее</button></a>
+        {% if new.url %}
+			<a href="{{ new.url }}"><button>Подробнее</button></a>
+		{% endif %}
     </div>
+    <hr>
 {% endfor %}
 
 {% endblock %}

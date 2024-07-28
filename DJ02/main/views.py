@@ -14,3 +14,6 @@ def tips(request):
 
 def safety(request):
     return render(request, 'main/safety.html')
+
+def news_home(request):
+    return render(request, 'main/news_home.html')

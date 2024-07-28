@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import News_post
 
-def news_list(request):
+def news(request):
     news = News_post.objects.all()
     return render(request, 'news/news.html', {'news': news})
 

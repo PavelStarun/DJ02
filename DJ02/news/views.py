@@ -5,6 +5,6 @@ def news(request):
     news = News_post.objects.all()
     return render(request, 'news/news.html', {'news': news})
 
-def news_detail(request, pk):
-    post = get_object_or_404(News_post, pk=pk)
-    return render(request, 'news/news_detail.html', {'post': post})
+def news_detail(request, news_id):
+    news = get_object_or_404(News_post, pk=news_id)
+    return render(request, 'news/news_detail.html', {'news': news})

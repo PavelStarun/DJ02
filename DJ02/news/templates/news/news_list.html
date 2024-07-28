@@ -17,10 +17,8 @@
         {% if new.image %}
             <img src="{{ new.image.url }}" alt="{{ new.title }}">
         {% endif %}
-        <br>
-
-        <p><em> {{ new.pub_date }}</em></p>
-        <p><strong> {{ new.name }} </strong></p>
+        <p><em>{{ new.pub_date }}</em></p>
+        <p><strong>{{ new.name }}</strong></p>
         <a href="{% url 'news_detail' new.pk %}"><button>Подробнее</button></a>
     </div>
 {% endfor %}

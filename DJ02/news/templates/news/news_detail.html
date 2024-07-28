@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'main/base.html' %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -6,9 +6,9 @@
 <h1>{{ post.title }}</h1>
 <p>{{ post.short_description }}</p>
 <p>{{ post.text }}</p>
-<p><em>{{ post.pub_date }}</em></p>
+<p>{{ post.pub_date }}</p>
 <p><strong>{{ post.name }}</strong></p>
-{% if new.image %}
-    <img src="{{ static.image.url }}" alt="{{ post.title }}">
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
 {% endif %}
 {% endblock %}

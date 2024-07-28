@@ -6,7 +6,7 @@ class News_post(models.Model):
     text = models.TextField('Новость')
     pub_date = models.DateTimeField('Дата публикации')
     name = models.CharField('Автор', max_length=50)
-    image = models.ImageField('Изображение', upload_to='news_images/', blank=True, null=True)
+    image = models.ImageField('Изображение', upload_to='static/images/', blank=True, null=True)
     url = models.URLField('Ссылка', blank=True, null=True)
 
     def __str__(self):
